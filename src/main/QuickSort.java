@@ -6,7 +6,7 @@ public class QuickSort {
         sort(ints, 0, ints.length - 1);
     }
 
-    private static void sort(int[] ints, int start, int end) {
+    public static void sort(int[] ints, int start, int end) {
         if (end - start == 1 && ints[start] > ints[end])
             swap(ints, start, end);
         else if (end - start > 1) {
@@ -21,7 +21,7 @@ public class QuickSort {
                 }
             }
             swap(ints, start, i - 1);
-            sort(ints, start, i - 1);
+            sort(ints, start, i - 2);
             sort(ints, i, end);
         }
     }
