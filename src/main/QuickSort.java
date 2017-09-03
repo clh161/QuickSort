@@ -7,9 +7,7 @@ public class QuickSort {
     }
 
     public static void sort(int[] ints, int start, int end) {
-        if (end - start == 1 && ints[start] > ints[end])
-            swap(ints, start, end);
-        else if (end - start > 1) {
+        if (start < end) {
             int pivotIndex = start + (int) (Math.random() * (end - start));
             int i = start + 1;
             int pivot = ints[pivotIndex];
